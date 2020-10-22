@@ -4,7 +4,7 @@
       <p>Carregando...</p>
     </div>
     <div v-if="data">
-      <h1>Home</h1>
+      <h1>Cursos</h1>
       {{ data }}
     </div>
   </div>
@@ -14,10 +14,13 @@
 import fetchData from "../mixins/fetchData";
 
 export default {
-  name: "home",
+  name: "cursos",
   mixins: [fetchData],
   created() {
-    this.fetchData("/home");
+    this.fetchData("/cursos");
   },
 };
 </script>
+
+<style>
+</style>
