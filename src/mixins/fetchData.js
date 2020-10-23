@@ -15,7 +15,7 @@ export default {
           .then((r) => r.json())
           .then((r) => (this.data = r))
           .finally(() => this.loading = false);
-      }, 1500);
+      }, 1000);
     },
   }
 }
