@@ -10,10 +10,12 @@ export default {
       this.loading = true;
       this.data = null;
 
-      fetch(`http://localhost:3000${url}`)
-        .then((r) => r.json())
-        .then((r) => (this.data = r))
-        .finally(() => this.loading = false);
+      setTimeout(() => {
+        fetch(`http://localhost:3000${url}`)
+          .then((r) => r.json())
+          .then((r) => (this.data = r))
+          .finally(() => this.loading = false);
+      }, 1500);
     },
   }
 }

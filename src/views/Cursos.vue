@@ -1,12 +1,14 @@
 <template>
   <div>
     <div v-if="loading">
-      <p>Carregando...</p>
+      <PageLoading />
     </div>
-    <div v-if="data">
-      <h1>Cursos</h1>
-      {{ data }}
-    </div>
+    <transition>
+      <div v-if="data">
+        <h1>Cursos</h1>
+        {{ data }}
+      </div>
+    </transition>
   </div>
 </template>
 

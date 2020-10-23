@@ -19,7 +19,7 @@ export default {
 body {
   margin: 0px;
   font-family: "Avenir", Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  /* -webkit-font-smoothing: antialiased; */
   color: #234;
 }
 
@@ -39,9 +39,34 @@ a.router-link-active {
   color: #4b8;
 }
 
+img {
+  max-width: 100%;
+}
+
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+}
+
+.v-enter {
+  opacity: 0;
+  transform: translate3d(-20px, 0, 0);
+}
+
+.v-enter-active {
+  transition: all 0.3s;
+}
+
+.conteudo {
+  display: grid;
+  grid-template-columns: 1fr minmax(200px, 400px);
+  grid-gap: 30px;
+}
+
+@media screen and (max-width: 600px) {
+  .conteudo {
+    display: block;
+  }
 }
 </style>
